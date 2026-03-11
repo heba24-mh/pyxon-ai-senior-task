@@ -1,48 +1,87 @@
-# Heba Task – Agentic AI Pipeline
+# Agentic AI Research Assistant
 
-## 📌 Overview
-This project is an **Agentic AI Pipeline** built with Python and Jupyter/Colab.  
-It creates an intelligent agent capable of:
-- Searching the web for information (Search Agent).
-- Reading and extracting text from articles (Reader Agent).
-- Building a vector index using embeddings and FAISS (RAG).
-- Retrieving the most relevant context (Retriever).
-- Summarizing answers with a language model (Summarizer Agent).
-- Displaying results interactively with ipywidgets (UI).
+## Overview
+
+This project implements an Agentic AI pipeline built with Python and Google Colab.
+
+The system creates an intelligent agent capable of:
+
+- Searching the web for information
+- Extracting text from articles
+- Building a vector index using FAISS
+- Retrieving relevant context using embeddings
+- Generating summarized answers using a language model
+- Displaying results through an interactive interface
 
 ---
 
-## ⚙️ Dependencies
-Install the required libraries:
+## Technologies Used
 
-```bash
-pip install ddgs requests beautifulsoup4 transformers sentence-transformers faiss-cpu ipywidgets🧠 Pipeline Components
-- LLM Setup: Uses google/flan-t5-base for text generation.
-- Embedding: Uses sentence-transformers (all-MiniLM-L6-v2) for text embeddings.
-- Search Agent: Queries DuckDuckGo via ddgs.
-- Reader Agent: Fetches and parses article text with BeautifulSoup.
-- Build Index (RAG): Creates a FAISS vector index for retrieval.
-- Retriever: Finds the most relevant context for a query.
-- Summarizer Agent: Generates concise answers using the retrieved context.
-- Router Agent: Decides whether the query is a URL, search, or RAG.
-- UI: Interactive interface with text input, search button, and slider for results.
-▶️ Usage
-- Open the notebook in Google Colab or Jupyter.
-- Run the dependency installation cell.
-- Enter your query in the text box.
-- Adjust the number of results with the slider.
-- Click the 🔍 Search button.
-- Results will appear in separate output boxes, each showing one article.
-📚 Example
-Query:
+Python  
+Transformers (HuggingFace)  
+Sentence Transformers  
+FAISS Vector Database  
+DuckDuckGo Search (ddgs)  
+BeautifulSoup  
+ipywidgets  
+
+---
+
+## System Architecture
+
+User Query  
+↓  
+Router Agent  
+↓  
+Search Agent  
+↓  
+Reader Agent  
+↓  
+Vector Index (FAISS)  
+↓  
+Retriever  
+↓  
+Summarizer Agent  
+↓  
+Final Answer + Sources
+
+---
+
+## Dependencies
+
+Install required libraries:
+
+pip install ddgs requests beautifulsoup4 transformers sentence-transformers faiss-cpu ipywidgets
+
+---
+
+## How to Run
+
+1. Open the notebook in Google Colab.
+2. Run the installation cell.
+3. Enter your query in the input box.
+4. Adjust the number of results using the slider.
+5. Click the Search button.
+
+The system will search the web, retrieve information, and generate summarized answers.
+
+---
+
+## Example Query
+
 What is Artificial Intelligence?
 
-
-The agent will:
+The system will:
 - Search the web
-- Read articles
+- Extract article text
 - Build a vector index
 - Retrieve relevant context
-- Display results in separate boxes with summaries
-👩‍💻 Author
-Developed by Heba Al_Shebat – Visionary developer, designer, and aspiring AI trainer.
+- Generate an answer using the language model
+- Display the results with sources
+
+---
+
+## Author
+
+Heba Al_Shebat  
+AI Developer and Data Science Graduate
